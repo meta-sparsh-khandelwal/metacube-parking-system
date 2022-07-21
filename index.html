@@ -29,11 +29,11 @@
     </header>
     <!-- Form section for adding a new employee -->
     <section id="employee" class="container">
-        <h1 class="heading-primary">Enter new employee details:</h1>
+        <h1 class="heading-primary">Employee details:</h1>
         <form action="" id="employeeForm" class="metaForm">
-            <label for="fullname"> Fullname </label>
-            <input type="text" name="fullname" id="fullname" required />
-            <div class="radio"> Gender: <br/>
+            <label for="fullname" class="heading-tertiary"> Fullname </label>
+            <input type="text" name="fullname" id="fullname" class="para" required />
+            <div class="radio"> <span class="heading-tertiary">Gender</span>: <br/>
                 <label for="male"> 
                     <input type="radio" id="male" name="gender" value="male" required /> Male 
                 </label>
@@ -41,26 +41,26 @@
                     <input type="radio" id="female" name="gender" value="female" /> Female 
                 </label>
             </div>
-            <label for="email"> Email </label>
-            <input type="email" name="email" id="email" required />
-            <label for="password"> Password </label>
+            <label for="email" class="heading-tertiary"> Email </label>
+            <input type="email" name="email" id="email" class="para" required />
+            <label for="password" class="heading-tertiary"> Password </label>
             <input type="password" id="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                 title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
                 required>
-            <label for="confirm_password"> Confirm Password </label>
-            <input type="password" id="confirm_password" name="confirm_password"
+            <label for="confirm_password" class="heading-tertiary"> Confirm Password </label>
+            <input type="password" id="confirm_password" name="confirm_password" class="para"
                 pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                 title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
                 required />
-            <label for="phone"> Phone Number </label>
-            <input type="tel" id="phone" name="phone" pattern="(6|7|8|9)\d{9}"
+            <label for="phone" class="heading-tertiary"> Phone Number </label>
+            <input type="tel" id="phone" class="para" name="phone" pattern="(6|7|8|9)\d{9}"
                 title="Must be a phone number of 10 digits" required />
-            <input type="submit" value="Add Employee" />
+            <button type="submit" class="btn-secondary"> Add Employee </button>
         </form>
     </section>
     <!-- Form section for adding a new vehicle -->
     <section id="vehicle" class="container">
-        <h1 class="heading-primary">Enter new vehicle details:</h1>
+        <h1 class="heading-primary">Vehicle details:</h1>
         <form action="" id="vehicleForm" class="metaForm">
             <label for="vehicle-make"> Vehicle Make </label>
             <input type="text" name="vehicle-make" id="vehicle-make" required />
@@ -78,7 +78,7 @@
             <input type="text" id="employee-id" name="employee-id" pattern="^[a-zA-Z].*" required />
             <textarea name="vehicle-identification" id="vehicle-identification" cols="20" rows="10"
                 placeholder="Vehicle Identification (If Any)"></textarea>
-            <input type="submit" value="Add Vehicle" />
+            <button type="submit" class="btn-secondary"> Add Vehicle </button>
         </form>
     </section>
     <!-- Feedback section -->
