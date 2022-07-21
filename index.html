@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&family=Roboto&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Metacube Parking System</title>
+</head>
+
+<body>
+    <header>
+        <nav id="navbar">
+            <a href="/"> <img src="images/logo.svg" id="logo" alt="logo"> </a>
+            <ul id="navigation">
+                <li><a href="#employee">Add Employee</a></li>
+                <li><a href="#vehicle">Add Vehicle</a></li>
+                <li><a href="#feedback">Give Feedback</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+            </ul>
+        </nav>
+        <div id="banner">
+        </div>
+    </header>
+    <!-- Form section for adding a new employee -->
+    <section id="employee" class="container">
+        <h1 class="heading-primary">Enter new employee details:</h1>
+        <form action="" id="employeeForm" class="metaForm">
+            <label for="fullname"> Fullname </label>
+            <input type="text" name="fullname" id="fullname" required />
+            <div class="radio"> Gender: <br/>
+                <label for="male"> 
+                    <input type="radio" id="male" name="gender" value="male" required /> Male 
+                </label>
+                <label for="female"> 
+                    <input type="radio" id="female" name="gender" value="female" /> Female 
+                </label>
+            </div>
+            <label for="email"> Email </label>
+            <input type="email" name="email" id="email" required />
+            <label for="password"> Password </label>
+            <input type="password" id="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+                required>
+            <label for="confirm_password"> Confirm Password </label>
+            <input type="password" id="confirm_password" name="confirm_password"
+                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+                required />
+            <label for="phone"> Phone Number </label>
+            <input type="tel" id="phone" name="phone" pattern="(6|7|8|9)\d{9}"
+                title="Must be a phone number of 10 digits" required />
+            <input type="submit" value="Add Employee" />
+        </form>
+    </section>
+    <!-- Form section for adding a new vehicle -->
+    <section id="vehicle" class="container">
+        <h1 class="heading-primary">Enter new vehicle details:</h1>
+        <form action="" id="vehicleForm" class="metaForm">
+            <label for="vehicle-make"> Vehicle Make </label>
+            <input type="text" name="vehicle-make" id="vehicle-make" required />
+            <label for="vehicle-model"> Vehicle Model </label>
+            <input type="text" name="vehicle-model" id="vehicle-model" required />
+            <label for="vehicle-type"> Vehicle Type </label>
+            <select name="vehicle-type" id="vehicle-type" required>
+                <option value="cycle"> Cycle </option>
+                <option value="motorcycle"> MotorCycle </option>
+                <option value="four-wheeler"> Four Wheeler </option>
+            </select> <br />
+            <label for="vehicle-number"> Vehicle Number </label>
+            <input type="text" id="vehicle-number" name="vehicle-number" required />
+            <label for="employee-id"> Employee Id </label>
+            <input type="text" id="employee-id" name="employee-id" pattern="^[a-zA-Z].*" required />
+            <textarea name="vehicle-identification" id="vehicle-identification" cols="20" rows="10"
+                placeholder="Vehicle Identification (If Any)"></textarea>
+            <input type="submit" value="Add Vehicle" />
+        </form>
+    </section>
+    <!-- Feedback section -->
+    <section id="feedback" class="container">
+        <h1 class="heading-primary">Get in Touch:</h1>
+        <form action="" id="feedbackForm" class="metaForm">
+            <label for="employee-name"> Name </label>
+            <input type="text" name="employee-name" id="employee-name" required />
+            <label for="feedbackEmail"> Email </label>
+            <input type="email" name="feedbackEmail" id="feedbackEmail" required />
+            <textarea name="feedbackMessage" id="feedbackMessage" cols="30" rows="10"
+                placeholder="What's on your mind ?..."></textarea>
+            <input type="submit" value="Send Message" />
+        </form>
+    </section>
+    <!-- Pricing section : shows pricing of different vehicle types -->
+    <section id="pricing">
+        <h2 class="heading-secondary">Pricing:</h2>
+        <div class="pricing-card">
+            <h3 class="heading-tertiary">Cycle</h3>
+            <div class="price-highlight">$100 / month</div>
+            <p class="prices">$5 Daily</p>
+            <p class="prices">$100 Monthly</p>
+            <p class="prices">$500 Yearly</p>
+            <a href="/" target="_blank">
+                <button class="btn-purchase btn-primary"> Purchase Now </button> </a>
+        </div>
+        <div class="pricing-card">
+            <h3 class="heading-tertiary">MotorCycle</h3>
+            <div class="price-highlight">$200 / month</div>
+            <p class="prices">$10 Daily</p>
+            <p class="prices">$200 Monthly</p>
+            <p class="prices">$1000 Yearly</p>
+            <a href="/" target="_blank">
+                <button class="btn-purchase btn-primary"> Purchase Now </button> </a>
+        </div>
+        <div class="pricing-card">
+            <h3 class="heading-tertiary">Four Wheeler</h3>
+            <div class="price-highlight">$500 / month</div>
+            <p class="prices">$20 Daily</p>
+            <p class="prices">$500 Monthly</p>
+            <p class="prices">$3500 Yearly</p>
+            <a href="/" target="_blank">
+                <button class="btn-purchase btn-primary"> Purchase Now </button> </a>
+        </div>
+    </section>
+</body>
+
+</html>

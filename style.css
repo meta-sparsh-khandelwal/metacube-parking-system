@@ -1,0 +1,70 @@
+/* CSS Reset */
+*  {
+    margin: 0px;
+    padding: 0px;
+}
+/* smooth scrolling for navigation */
+html {
+    scroll-behavior: smooth;
+}
+/* navigation styling */
+#navbar {
+    height: 60px;
+    display: flex;
+    column-gap: 100px;
+    align-items: center;
+    background-color: #51c7db;
+}
+#logo {
+    height: 54px;
+    filter: invert();
+    padding: 5px 8px;
+}
+#navbar ul {
+    list-style: none;
+    display: flex;
+    column-gap: 40px;
+}
+#navbar ul li {
+    margin: 0px 10px;
+}
+#navbar ul li a {
+    color: #000;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 1.1rem;
+    padding: 10px 5px;
+}
+#navbar ul li a:hover {
+    color:azure;
+    transition: all 0.3s ease-out;
+}
+#banner {
+    height: 60vh;
+    background: url(images/banner.jpg);
+}
+/* add employee section */
+#employee {
+    background-color: #dceae8;
+}
+h1, h2, h3 {
+    font-family: 'Roboto', sans-serif;
+}
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Quicksand', sans-serif;
+}
+.metaForm {
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+}
+.metaForm input {
+    margin-bottom: 20px;
+}
+.radio {
+    line-height: 2rem;
+}
