@@ -5,10 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- adding favicon -->
+    <link rel="icon" type="image/x-icon" href="/images/logo.svg">\
+    <!-- adding google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&family=Roboto&display=swap"
         rel="stylesheet">
+    <!-- external stylesheet -->
     <link rel="stylesheet" href="style.css">
     <title>Metacube Parking System</title>
 </head>
@@ -89,22 +93,25 @@
     <!-- Feedback section -->
     <section id="feedback" class="container">
         <h1 class="heading-primary">Get in Touch:</h1>
-        <form action="" id="feedbackForm">
-            <label for="employee-name" class="heading-tertiary"> Name </label>
-            <input type="text" name="employee-name" id="employee-name" required />
-            <label for="feedbackEmail" class="heading-tertiary"> Email </label>
-            <input type="email" name="feedbackEmail" id="feedbackEmail" required />
-            <textarea name="feedbackMessage" id="feedbackMessage" cols="30" rows="10"
-                placeholder="What's on your mind ?..."></textarea>
-            <button type="submit" class="btn-feedback"> Send Message </button>
-        </form>
+        <div id="feedbackWrapper">
+            <img src="images/feedback.svg" alt="feedbackIMG">
+            <form action="" id="feedbackForm">
+                <label for="employee-name" class="heading-tertiary"> Name </label>
+                <input type="text" name="employee-name" id="employee-name" required />
+                <label for="feedbackEmail" class="heading-tertiary"> Email </label>
+                <input type="email" name="feedbackEmail" id="feedbackEmail" required />
+                <textarea name="feedbackMessage" id="feedbackMessage" cols="30" rows="10"
+                    placeholder="What's on your mind ?..."></textarea>
+                <button type="submit" class="btn-feedback"> Send Message </button>
+            </form>
+        </div>
     </section>
     <!-- Pricing section : shows pricing of different vehicle types -->
     <section id="pricing" >
         <h2 class="heading-primary">Pricing:</h2>
         <div class="pricing-card">
             <h3 class="heading-secondary">Cycle</h3>
-            <div class="price-highlight">$100 / month</div>
+            <div class="price-highlight"><strong>$100</strong> / month</div>
             <p class="prices">$5 Daily</p>
             <p class="prices">$100 Monthly</p>
             <p class="prices">$500 Yearly</p>
@@ -113,7 +120,7 @@
         </div>
         <div class="pricing-card">
             <h3 class="heading-secondary">MotorCycle</h3>
-            <div class="price-highlight">$200 / month</div>
+            <div class="price-highlight"><strong> $200 </strong> / month</div>
             <p class="prices">$10 Daily</p>
             <p class="prices">$200 Monthly</p>
             <p class="prices">$1000 Yearly</p>
@@ -122,7 +129,7 @@
         </div>
         <div class="pricing-card">
             <h3 class="heading-secondary">Four Wheeler</h3>
-            <div class="price-highlight">$500 / month</div>
+            <div class="price-highlight"><strong> $500 </strong> / month</div>
             <p class="prices">$20 Daily</p>
             <p class="prices">$500 Monthly</p>
             <p class="prices">$3500 Yearly</p>
@@ -130,6 +137,9 @@
                 <button class="btn-purchase btn-primary"> Purchase Now </button> </a>
         </div>
     </section>
+    <footer>
+        Copyright &copy; 2022 Metacube.com. All rights reserved.
+    </footer>
 </body>
 <script src="index.js"></script>
 
