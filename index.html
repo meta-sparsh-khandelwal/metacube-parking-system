@@ -29,76 +29,81 @@
     </header>
     <!-- Form section for adding a new employee -->
     <section id="employee" class="container">
-        <h1 class="heading-primary">Employee details:</h1>
+        <button class="heading-primary btn-collapse collapse">Employee details</button>
         <form action="" id="employeeForm" class="metaForm">
-            <label for="fullname" class="heading-tertiary"> Fullname </label>
-            <input type="text" name="fullname" id="fullname" class="para" required />
-            <div class="radio"> <span class="heading-tertiary">Gender</span>: <br/>
-                <label for="male"> 
-                    <input type="radio" id="male" name="gender" value="male" required /> Male 
-                </label>
-                <label for="female"> 
-                    <input type="radio" id="female" name="gender" value="female" /> Female 
-                </label>
+            <div class="wrapper-padding">
+                <label for="fullname" class="heading-tertiary"> Fullname </label>
+                <input type="text" name="fullname" id="fullname" class="para" required />
+                <div class="radio"> <span class="heading-tertiary">Gender</span><br />
+                    <label for="male">
+                        <input type="radio" id="male" name="gender" value="male" required /> Male
+                    </label>
+                    <label for="female">
+                        <input type="radio" id="female" name="gender" value="female" /> Female
+                    </label>
+                </div>
+                <label for="email" class="heading-tertiary"> Email </label>
+                <input type="email" name="email" id="email" class="para" required />
+                <label for="password" class="heading-tertiary"> Password </label>
+                <input type="password" id="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                    class="para"
+                    title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+                    required>
+                <label for="confirm_password" class="heading-tertiary"> Confirm Password </label>
+                <input type="password" id="confirm_password" name="confirm_password" class="para"
+                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                    title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+                    required />
+                <label for="phone" class="heading-tertiary"> Phone Number </label>
+                <input type="tel" id="phone" class="para" name="phone" pattern="(6|7|8|9)\d{9}"
+                    title="Must be a phone number of 10 digits" required />
+                <button type="submit" class="btn-secondary"> Add Employee </button>
             </div>
-            <label for="email" class="heading-tertiary"> Email </label>
-            <input type="email" name="email" id="email" class="para" required />
-            <label for="password" class="heading-tertiary"> Password </label>
-            <input type="password" id="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-                title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
-                required>
-            <label for="confirm_password" class="heading-tertiary"> Confirm Password </label>
-            <input type="password" id="confirm_password" name="confirm_password" class="para"
-                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-                title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
-                required />
-            <label for="phone" class="heading-tertiary"> Phone Number </label>
-            <input type="tel" id="phone" class="para" name="phone" pattern="(6|7|8|9)\d{9}"
-                title="Must be a phone number of 10 digits" required />
-            <button type="submit" class="btn-secondary"> Add Employee </button>
         </form>
     </section>
     <!-- Form section for adding a new vehicle -->
     <section id="vehicle" class="container">
-        <h1 class="heading-primary">Vehicle details:</h1>
+        <button class="heading-primary btn-collapse collapse">Vehicle details</button>
         <form action="" id="vehicleForm" class="metaForm">
-            <label for="vehicle-make"> Vehicle Make </label>
-            <input type="text" name="vehicle-make" id="vehicle-make" required />
-            <label for="vehicle-model"> Vehicle Model </label>
-            <input type="text" name="vehicle-model" id="vehicle-model" required />
-            <label for="vehicle-type"> Vehicle Type </label>
-            <select name="vehicle-type" id="vehicle-type" required>
-                <option value="cycle"> Cycle </option>
-                <option value="motorcycle"> MotorCycle </option>
-                <option value="four-wheeler"> Four Wheeler </option>
-            </select> <br />
-            <label for="vehicle-number"> Vehicle Number </label>
-            <input type="text" id="vehicle-number" name="vehicle-number" required />
-            <label for="employee-id"> Employee Id </label>
-            <input type="text" id="employee-id" name="employee-id" pattern="^[a-zA-Z].*" required />
-            <textarea name="vehicle-identification" id="vehicle-identification" cols="20" rows="10"
-                placeholder="Vehicle Identification (If Any)"></textarea>
-            <button type="submit" class="btn-secondary"> Add Vehicle </button>
+            <div class="wrapper-padding">
+                <label for="vehicle-make" class="heading-tertiary"> Vehicle Make </label>
+                <input type="text" name="vehicle-make" id="vehicle-make" required />
+                <label for="vehicle-model" class="heading-tertiary"> Vehicle Model </label>
+                <input type="text" name="vehicle-model" id="vehicle-model" required />
+                <label for="vehicle-type" class="heading-tertiary"> Vehicle Type </label>
+                <select name="vehicle-type" id="vehicle-type" required>
+                    <option value="cycle"> Cycle </option>
+                    <option value="motorcycle"> MotorCycle </option>
+                    <option value="four-wheeler"> Four Wheeler </option>
+                </select> <br />
+                <label for="vehicle-number" class="heading-tertiary"> Vehicle Number </label>
+                <input type="text" id="vehicle-number" name="vehicle-number" required />
+                <label for="employee-id" class="heading-tertiary"> Employee Id </label>
+                <input type="text" id="employee-id" name="employee-id" pattern="^[a-zA-Z].*" required />
+                <textarea name="vehicle-identification" id="vehicle-identification" cols="20" rows="10"
+                    placeholder="Vehicle Identification (If Any)"></textarea>
+                <button type="submit" class="btn-secondary"> Add Vehicle </button>
+            </div>
         </form>
     </section>
     <!-- Feedback section -->
     <section id="feedback" class="container">
         <h1 class="heading-primary">Get in Touch:</h1>
-        <form action="" id="feedbackForm" class="metaForm">
-            <label for="employee-name"> Name </label>
+        <form action="" id="feedbackForm">
+            <label for="employee-name" class="heading-tertiary"> Name </label>
             <input type="text" name="employee-name" id="employee-name" required />
-            <label for="feedbackEmail"> Email </label>
+            <label for="feedbackEmail" class="heading-tertiary"> Email </label>
             <input type="email" name="feedbackEmail" id="feedbackEmail" required />
             <textarea name="feedbackMessage" id="feedbackMessage" cols="30" rows="10"
                 placeholder="What's on your mind ?..."></textarea>
-            <input type="submit" value="Send Message" />
+            <button type="submit" class="btn-feedback"> Send Message </button>
         </form>
     </section>
     <!-- Pricing section : shows pricing of different vehicle types -->
-    <section id="pricing">
-        <h2 class="heading-secondary">Pricing:</h2>
+    <section id="pricing" >
+        <h2 class="heading-primary">Pricing:</h2>
         <div class="pricing-card">
-            <h3 class="heading-tertiary">Cycle</h3>
+            <h3 class="heading-secondary">Cycle</h3>
             <div class="price-highlight">$100 / month</div>
             <p class="prices">$5 Daily</p>
             <p class="prices">$100 Monthly</p>
@@ -107,7 +112,7 @@
                 <button class="btn-purchase btn-primary"> Purchase Now </button> </a>
         </div>
         <div class="pricing-card">
-            <h3 class="heading-tertiary">MotorCycle</h3>
+            <h3 class="heading-secondary">MotorCycle</h3>
             <div class="price-highlight">$200 / month</div>
             <p class="prices">$10 Daily</p>
             <p class="prices">$200 Monthly</p>
@@ -116,7 +121,7 @@
                 <button class="btn-purchase btn-primary"> Purchase Now </button> </a>
         </div>
         <div class="pricing-card">
-            <h3 class="heading-tertiary">Four Wheeler</h3>
+            <h3 class="heading-secondary">Four Wheeler</h3>
             <div class="price-highlight">$500 / month</div>
             <p class="prices">$20 Daily</p>
             <p class="prices">$500 Monthly</p>
@@ -126,5 +131,6 @@
         </div>
     </section>
 </body>
+<script src="index.js"></script>
 
 </html>
