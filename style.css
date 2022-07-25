@@ -179,10 +179,13 @@ html {
 }
 #feedbackWrapper {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 #feedbackWrapper img {
-    width: 28vw;
+    width: 15rem;
+    height: 16rem;
+    margin-top: 150px;
+    margin-left: 108px;
 }
 #feedbackForm {
     display: flex;
